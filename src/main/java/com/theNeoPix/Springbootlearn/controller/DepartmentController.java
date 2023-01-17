@@ -2,7 +2,9 @@ package com.theNeoPix.Springbootlearn.controller;
 
 import com.theNeoPix.Springbootlearn.entity.Department;
 import com.theNeoPix.Springbootlearn.service.DepartmentService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,7 +16,7 @@ public class DepartmentController {
     private DepartmentService departmentService;
 
     @PostMapping("/departments")
-    public Department saveDepartment(@RequestBody Department department){
+    public Department saveDepartment(@Valid @RequestBody Department department){
         return departmentService.saveDepartment(department);
     }
 
