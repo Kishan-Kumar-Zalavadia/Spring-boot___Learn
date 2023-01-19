@@ -1,6 +1,7 @@
 package com.theNeoPix.Springbootlearn.controller;
 
 import com.theNeoPix.Springbootlearn.entity.Department;
+import com.theNeoPix.Springbootlearn.error.DepartmentNotFoundException;
 import com.theNeoPix.Springbootlearn.service.DepartmentService;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
@@ -31,7 +32,7 @@ public class DepartmentController {
     }
 
     @GetMapping("/departments/{id}")
-    public Department fetchDepartmentByID(@PathVariable("id") Long departmentId){
+    public Department fetchDepartmentByID(@PathVariable("id") Long departmentId) throws DepartmentNotFoundException {
         return departmentService.fetchDepartmentById(departmentId);
     }
 
