@@ -6,6 +6,7 @@ import com.theNeoPix.Springbootlearn.error.DepartmentNotFoundException;
 import java.util.List;
 
 public interface DepartmentService {
+
     public Department saveDepartment(Department department);
 
     public List<Department> fetchDepartmentList();
@@ -17,4 +18,5 @@ public interface DepartmentService {
     public Department updateDepartmentById(Long departmentId, Department department);
 
     public Department fetchDepartmentByName(String departmentName);
+
 }
