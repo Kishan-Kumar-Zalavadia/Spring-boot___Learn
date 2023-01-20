@@ -35,7 +35,11 @@ public class DepartmentServiceImpl implements DepartmentService{
     }
 
     @Override
-    public void deleteDepartmentById(Long departmentId) {
+    public void deleteDepartmentById(Long departmentId) throws DepartmentNotFoundException {
+        Optional<Department> department = departmentRepository.findById(departmentId);
+        if(!department.isPresent()){
+            throw new DepartmentNotFoundException("Department Not Available to delete");
+        }
         departmentRepository.deleteById(departmentId);
     }
 
