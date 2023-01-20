@@ -3,6 +3,7 @@ package com.theNeoPix.Springbootlearn.service;
 import com.theNeoPix.Springbootlearn.entity.Department;
 import com.theNeoPix.Springbootlearn.repository.DepartmentRepository;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
