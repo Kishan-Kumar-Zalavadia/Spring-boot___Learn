@@ -10,3 +10,9 @@ spring:
     show-sql: 'true'
 welcome:
   message: Welcome TheNeoPix again (qa) !!
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
